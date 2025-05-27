@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Blog Spot{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="glass">
+    <h1 class="text-3xl font-bold select-none" onclick="window.location.href='/';">📘 Blog-Spot</h1>
+    <nav class="flex gap-6 text-lg font-medium text-white">
+      <a href="/">Home</a>
+      <a href="/view-blogs/">View Blogs</a>
+      <a href="/post-blog/">Post a Blog</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    {% block content %}
+    <!-- Child templates will insert their content here -->
+    {% endblock %}
+  </main>
+
+</body>
+</html>

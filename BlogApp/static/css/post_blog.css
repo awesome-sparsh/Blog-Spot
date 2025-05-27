@@ -1,0 +1,104 @@
+.btn-shared {
+display: inline-block;
+padding: 10px 20px;
+color: white;
+border: none;
+border-radius: 12px;
+font-weight: bold;
+font-size: 16px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+margin-left: 10px;
+}
+
+.btn-shared:hover {
+opacity: 0.85;
+transform: scale(1.02);
+}
+
+.blog-form-wrapper {
+width: 100%;
+max-width: 950px;
+margin: 20px 0 60px 60px; 
+padding: 50px;
+background: rgba(255, 255, 255, 0.08); 
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border-radius: 20px;
+border: 1px solid rgba(255, 255, 255, 0.2);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+font-family: 'Inter', 'Segoe UI', sans-serif;
+color: #fff;
+}
+
+.blog-form-wrapper h2 {
+font-size: 36px;
+font-weight: 700;
+color: #fff;
+margin-bottom: 35px;
+}
+
+.blog-form-wrapper .form-group {
+margin-bottom: 30px;
+}
+
+.blog-form-wrapper label {
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 10px;
+display: block;
+color: #f0f0f0;
+}
+
+.blog-form-wrapper .form-control {
+width: 100%;
+padding: 16px 20px;
+font-size: 17px;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 10px;
+background-color: rgba(255, 255, 255, 0.15);
+color: #fff;
+transition: all 0.3s ease;
+}
+
+.blog-form-wrapper .form-control:focus {
+border-color: #ffffff;
+background-color: rgba(255, 255, 255, 0.25);
+box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.15);
+outline: none;
+}
+
+.blog-form-wrapper textarea.form-control {
+resize: vertical;
+min-height: 200px;
+}
+
+.blog-form-wrapper .btn-submit {
+padding: 14px 32px;
+font-size: 17px;
+font-weight: 600;
+color: white;
+background: linear-gradient(to right, #6c63ff, #5a54e8);
+border: none;
+border-radius: 10px;
+cursor: pointer;
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+box-shadow: 0 5px 18px rgba(108, 99, 255, 0.3);
+}
+
+.blog-form-wrapper .btn-submit:hover {
+background: linear-gradient(to right, #5a54e8, #6c63ff);
+box-shadow: 0 7px 22px rgba(108, 99, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+.blog-form-wrapper {
+    margin: 20px;
+    padding: 30px;
+}
+
+.blog-form-wrapper h2 {
+    font-size: 28px;
+}
+}

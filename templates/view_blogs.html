@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}Blogs | Blog Spot{% endblock %}
+
+{% block content %}
+<!-- Blog Posts Section -->
+  <main class="max-w-5xl my-12 space-y-8 px-4 md:px-0" style="margin-left: 10px;">
+    {% for post in posts reversed %}
+      <div class="glass">
+        <a href="/blog/{{ post.id }}" target="_blank" class="block">
+          <h2 class="text-3xl font-bold mb-3">{{ post.title }}</h2>
+          <h5 class="mb-5" style="color: #EFEFEF;">{{ post.created_at }}</h5>
+          <p class="leading-relaxed">{{ post.body|truncatewords:20 }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </main>
+{% endblock %}

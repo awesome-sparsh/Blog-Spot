@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block title %}{{ post.title }} | Blog Spot{% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+<div class="flipbook max-w-3xl mx-auto mt-20 px-4" style="margin-left: 2px;">
+  <div class="glass bg-white/20 p-10 rounded-xl shadow-2xl text-white relative transition-all duration-500 ease-in-out">
+    
+    <!-- Blog Title -->
+    <h2 class="text-4xl font-extrabold text-center mb-6 tracking-wide">{{ post.title }}</h2>
+
+    <!-- Page Container -->
+    <div class="relative min-h-[200px]">
+      {% for page in pages %}
+        <div id="page{{ forloop.counter0 }}" class="page {% if forloop.first %}page-active{% else %}page-hidden{% endif %}">
+          <p class="leading-relaxed text-lg font-medium whitespace-pre-wrap">{{ page|linebreaks }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Navigation Controls -->
+  <div class="flex justify-between items-center mt-6 px-2">
+    <button id="prevBtn"
+      onclick="flipPage(-1)"
+      class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold px-5 py-2 rounded-md shadow-md hover:from-cyan-600 hover:to-blue-600 transition hidden">
+      ⬅ Previous
+    </button>
+
+    <span id="pageCounter" class="text-white text-base font-semibold tracking-wide font-mono"></span>
+
+    <button id="nextBtn"
+      onclick="flipPage(1)"
+      class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold px-5 py-2 rounded-md shadow-md hover:from-cyan-600 hover:to-blue-600 transition">
+      Next ➡
+    </button>
+  </div>
+</div>
+
+<script src="{% static 'js/blog.js' %}"></script>
+
+{% endblock %}
