@@ -26,8 +26,11 @@ SECRET_KEY = 'django-insecure-@%$41kp#l%dfkwyakqp=c@df!9v&ljk22i-zx2%2s4alb^9coe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    'blog-spot-gfya.onrender.com',  # Add your Render domain here
+    'localhost',                    # Optional: for local development
+    '127.0.0.1'                     # Optional: for local development
+]
 
 # Application definition
 
