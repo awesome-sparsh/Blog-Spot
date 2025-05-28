@@ -1,3 +1,8 @@
+Developed by Sparsh Sethi
+    https://www.sparshsethi.com
+    https://github.com/awesome-sparsh/
+    APP can be found at https://blog-spot-gfya.onrender.com
+
 📝 Blog-Spot
 Blog-Spot is a full-featured blogging platform built with Django. It allows users to create, edit, and manage blog posts with a clean and responsive interface.
 
