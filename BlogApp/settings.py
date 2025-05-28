@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'BlogApp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'db_sparsh_a4w8',
         'USER': 'sparshsethi',
-        'PASSWORD': 'IGE7zvyvRyrvViKvN5zhWmn6qfTqaMYZ',
-        'HOST': 'dpg-d0qv1uh5pdvs73avvjd0-a.oregon-postgres.render.com',
+        'PASSWORD': 'YHAvL6l9AZ68kr1XoSmCVoU9nXwWIinY',
+        'HOST': 'dpg-d0rdctumcj7s73868nbg-a.oregon-postgres.render.com',
     }
 }
 
